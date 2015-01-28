@@ -94,9 +94,9 @@ end
 
 def main
   idols = Scraper.new.scrape()
-  dir = File.join(File.dirname(__FILE__), '../lib/idolmaster')
-  open(File.join(dir, 'cinderella_girls.yaml'), 'w'){|f|f.write(YAML.dump(idols))}
-  open(File.join(dir, 'cinderella_girls.json'), 'w'){|f|f.write(JSON.dump(idols))}
+  dir = File.join(File.dirname(__FILE__), '../lib/idolmaster/cinderella_girls')
+  #open(File.join(dir, 'idols.yaml'), 'w'){|f|f.write(YAML.dump(idols))}
+  open(File.join(dir, 'idols.json'), 'w'){|f|f.write(JSON.dump(idols))}
 end
 
 main()
