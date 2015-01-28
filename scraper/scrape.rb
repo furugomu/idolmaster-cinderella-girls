@@ -70,6 +70,10 @@ class Scraper
   def profiles(url)
     page = @agent.get(url)
     page.root.css('.idol').map do |profile|
+      # style から画像名を得る
+      style = profile.at('[style]').attr('style')
+      image_id = style.match(/%2F([0-9a-f]+)\.jpg/)[1]
+      # その他
       array = profile.css('[type=hidden]').map{|hidden|
         hidden.attribute_nodes.select{|attr|
           attr.name =~ /^data-/
@@ -82,7 +86,7 @@ class Scraper
           end
         }
       }.flatten
-      Hash[*array]
+      Hash[*array].merge('image_id'=>image_id)
     end
   end
 
