@@ -1,4 +1,5 @@
 require "idolmaster/cinderella_girls/version"
+require "idolmaster/cinderella_girls/idols"
 
 module Idolmaster
   module CinderellaGirls

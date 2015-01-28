@@ -4,3 +4,8 @@ desc 'モバゲーからデータを取ってくる'
 task :scrape do
   load('script/scrape.rb')
 end
+
+desc 'idols.rb を作る'
+task :generate do
+  load('script/generate.rb')
+end
