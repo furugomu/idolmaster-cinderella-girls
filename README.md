@@ -1,6 +1,6 @@
 # Idolmaster::CinderellaGirls
 
-TODO: Write a gem description
+![THE IDOLM@STER Cinderella Girls](http://cinderella.idolmaster.jp/images/logo_cin.png)
 
 ## Installation
 
@@ -20,7 +20,46 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'idolmaster/cinderella_girls'
+Idolmaster::CinderellaGirls.search age: 16, type: 'passion', height: 155
+```
+```ruby
+=>
+[{:name=>"高森藍子",
+  :profiles=>
+   [{:name=>"高森藍子",
+     :rarity=>"normal",
+     :attribute=>"passion",
+     :kana=>"たかもりあいこ",
+     :age=>"16歳",
+     :height=>"155cm",
+     :weight=>"42kg",
+     :size=>"74/60/79",
+     :birthday=>"7月25日",
+     :constellation=>"獅子座",
+     :blood=>"O型",
+     :arm=>"右",
+     :from=>"東京",
+     :hobby=>"近所の公園をお散歩",
+     :comment=>
+      "初めまして､ﾌﾟﾛﾃﾞｭｰｻｰさん｡ﾌｧﾝのみなさんが優しい気持ちになれるような､微笑んでくれるようなｱｲﾄﾞﾙを目指したいと思って
+いるんです｡よろしくお願いしますねっ｡",
+     :vid=>"0",
+     :cv=>"金子有希",
+     :image_id=>"25ea7fdd66fc6bd8e7209a4c0d2ba00c",
+     :bust=>"74",
+     :weist=>"60",
+     :hip=>"79"},
+    ...]}]
+```
+
+`Enumerable` methods are available.
+
+```ruby
+Idolmaster::CinderellaGirls.count #=> 200
+Idolmaster::CinderellaGirls.all #=> whole idols
+```
 
 ## Contributing
 
