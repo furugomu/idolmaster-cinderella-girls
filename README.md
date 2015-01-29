@@ -58,7 +58,7 @@ Idolmaster::CinderellaGirls.search age: 16, type: 'passion', height: 155
 
 ```ruby
 Idolmaster::CinderellaGirls.count #=> 200
-Idolmaster::CinderellaGirls.all #=> whole idols
+Idolmaster::CinderellaGirls.to_a #=> whole idols
 ```
 
 ## Contributing
