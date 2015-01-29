@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["furugomu"]
   spec.email         = ["furugomu@gmail.com"]
   spec.summary       = %q{THE IDOLM@STER Cinderella Girls}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.description   = %q{Idol data from THE IDOLM@STER Cinderella Girls}
+  spec.homepage      = "https://github.com/furugomu/idolmaster-cinderella-girls/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
