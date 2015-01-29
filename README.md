@@ -21,7 +21,7 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-require 'idolmaster/cinderella_girls'
+require 'idolmaster-cinderella-girls'
 Idolmaster::CinderellaGirls.search age: 16, type: 'passion', height: 155
 ```
 ```ruby
