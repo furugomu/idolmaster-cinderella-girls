@@ -21,6 +21,11 @@ module Idolmaster
       assert_equal CinderellaGirls::IDOLS, CinderellaGirls.to_a
     end
 
+    it 'respond to size' do
+      assert CinderellaGirls.respond_to?(:size)
+      assert_equal CinderellaGirls::IDOLS.size, CinderellaGirls.size
+    end
+
     it 'is an Enumerable' do
       assert CinderellaGirls.is_a?(Enumerable)
     end

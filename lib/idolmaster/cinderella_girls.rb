@@ -14,6 +14,10 @@ module Idolmaster
         IDOLS.to_a
       end
 
+      def size
+        IDOLS.size
+      end
+
       def search(q={})
         find_all do |idol|
           next true if q[:name] && q[:name] === idol[:name]
