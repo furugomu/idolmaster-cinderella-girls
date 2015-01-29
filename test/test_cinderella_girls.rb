@@ -30,6 +30,10 @@ module Idolmaster
       assert CinderellaGirls.is_a?(Enumerable)
     end
 
+    it 'tell json_path' do
+      assert CinderellaGirls.json_path.exist?
+    end
+
     describe '.search' do
       it 'search idol name' do
         assert_equal '南条光', CinderellaGirls.search(name: '南条光')[0][:name]

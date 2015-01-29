@@ -1,5 +1,6 @@
 require "idolmaster/cinderella_girls/version"
 require "idolmaster/cinderella_girls/idols"
+require 'pathname'
 
 module Idolmaster
   module CinderellaGirls
@@ -16,6 +17,10 @@ module Idolmaster
 
       def size
         IDOLS.size
+      end
+
+      def json_path
+        Pathname.new(__FILE__).dirname.join('cinderella_girls/idols.json')
       end
 
       def search(q={})
