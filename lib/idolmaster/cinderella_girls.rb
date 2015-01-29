@@ -3,6 +3,37 @@ require "idolmaster/cinderella_girls/idols"
 
 module Idolmaster
   module CinderellaGirls
-    # Your code goes here...
+    extend Enumerable
+
+    class << self
+      def each(&block)
+        IDOLS.each(&block)
+      end
+
+      def to_a
+        IDOLS.to_a
+      end
+
+      def search(q={})
+        find_all do |idol|
+          next true if q[:name] && q[:name] === idol[:name]
+          idol[:profiles].any? do |profile|
+            q.all? do |key, condition|
+              value = profile[key] or break
+              type = condition.is_a?(Range) ? condition.first : condition
+              case type
+              when String, Regexp
+                value = value.to_s
+              when Integer
+                value = value.to_i
+              when Float
+                value = value.to_i
+              end
+              condition === value
+            end
+          end
+        end
+      end
+    end
   end
 end
