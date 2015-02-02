@@ -25,7 +25,7 @@ end
 
 def process_profile(profile)
   profile = symbolyze_keys(profile)
-  profile[:bust], profile[:weist], profile[:hip] = profile[:size].split('/')
+  profile[:bust], profile[:waist], profile[:hip] = profile[:size].split('/')
   profile
 end
 

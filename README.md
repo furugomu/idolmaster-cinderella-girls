@@ -49,7 +49,7 @@ Idolmaster::CinderellaGirls.search age: 16, type: 'passion', height: 155
      :cv=>"金子有希",
      :image_id=>"25ea7fdd66fc6bd8e7209a4c0d2ba00c",
      :bust=>"74",
-     :weist=>"60",
+     :waist=>"60",
      :hip=>"79"},
     ...]}]
 ```

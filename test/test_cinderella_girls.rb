@@ -48,7 +48,7 @@ module Idolmaster
       end
 
       it 'accept number' do
-        assert_equal '高森藍子', CinderellaGirls.search(bust: 74, weist: 60)[0][:name]
+        assert_equal '高森藍子', CinderellaGirls.search(bust: 74, waist: 60)[0][:name]
       end
 
       it 'accept regexp' do
